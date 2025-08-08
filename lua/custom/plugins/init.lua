@@ -25,7 +25,9 @@ return {
         dapui.open()
       end
       dap.listeners.before.event_terminated.dapui_config = function()
-        dapui.close()
+        vim.notify('Debug terminated', vim.log.levels.ERROR, {
+          title = 'Terminated',
+        })
       end
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
@@ -63,5 +65,12 @@ return {
   -- vscode colorScheme
   {
     'Mofiqul/vscode.nvim',
+  },
+  -- notification
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.notify = require 'notify'
+    end,
   },
 }
