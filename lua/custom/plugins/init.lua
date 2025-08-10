@@ -37,7 +37,7 @@ return {
       vim.keymap.set('n', '<F10>', dap.step_over, {})
       vim.keymap.set('n', '<F11>', dap.step_into, {})
       vim.keymap.set('n', '<F23>', dap.step_out, {})
-      vim.keymap.set('n', '<F5>', ':DapContinue<CR>', {})
+      vim.keymap.set('n', '<F5>', ':e main.go<CR> :DapContinue<CR>', {})
       vim.keymap.set('n', '<F17>', ':DapTerminate<CR> :sleep 2<CR> :DapContinue<CR>', {})
 
       vim.fn.sign_define('DapBreakpoint', { text = '🔴', texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
