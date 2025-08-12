@@ -168,10 +168,10 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('i', 'jk', '<Esc>')
-vim.keymap.set('i', '<Leader>xx', ':so %<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', '<cmd>:Telescope diagnostics<CR>', { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>tdl', '<cmd>:TodoTelescope<CR>', { desc = 'Open TodoTelescope' })
 
 vim.keymap.set('n', '<C-e>', '<cmd>Neotree<CR>')
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
