@@ -33,7 +33,10 @@ return {
         dapui.close()
       end
 
-      vim.keymap.set('n', '<Leader>db', dap.toggle_breakpoint, {})
+      vim.keymap.set('n', '<Leader>db', dap.toggle_breakpoint, { desc = 'Add break point 🔴' })
+      vim.keymap.set('n', '<Leader>dd', dap.clear_breakpoints, { desc = 'Clear break points' })
+      vim.keymap.set('n', '<Leader>dt', dap.terminate, { desc = 'Terminate Debug' })
+      vim.keymap.set('n', '<Leader>dc', dapui.close, { desc = 'Close Debug UI' })
       vim.keymap.set('n', '<F10>', dap.step_over, {})
       vim.keymap.set('n', '<F11>', dap.step_into, {})
       vim.keymap.set('n', '<F23>', dap.step_out, {})
